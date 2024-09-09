@@ -34,7 +34,7 @@ time.sleep(2)  # Adjust sleep time as
 # Loop to scroll and collect profile data with pagination
 profiles = driver.find_elements(By.CSS_SELECTOR, ".search-user-link")  # Replace with appropriate selector
 data = []
-page_count = 1
+# page_count = 1
 
 while True:  # Loop until there are no more pages
     for profile in profiles:
@@ -54,9 +54,9 @@ while True:  # Loop until there are no more pages
         next_page_button.click()
         time.sleep(2)  # Adjust wait time for page to load
         profiles = driver.find_elements(By.CSS_SELECTOR, ".search-user-link")  # Update selector if needed for subsequent pages
-        page_count += 1
-        if page_count > 5:
-            break
+        # page_count += 1
+        # if page_count > 5:
+        #     break
 
     except:
         print("Reached the last page")
